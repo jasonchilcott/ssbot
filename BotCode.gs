@@ -588,7 +588,7 @@ function doTweet(tweet, tweetID) {
       var payload = { status: tweet, media_ids: media };
 
     } else {
-      var payload = { status: tweet };
+      var payload = { text: tweet };
     }
   } else {
     var authorizationUrl = service.authorize();
@@ -602,7 +602,7 @@ function doTweet(tweet, tweetID) {
 
 
   try {
-    var result = service.fetch('https://api.twitter.com/1.1/statuses/update.json', parameters);
+    var result = service.fetch('api.twitter.com/2/tweets', parameters);
     Logger.log(result.getContentText());
     var response = JSON.parse(result.getContentText());
 
