@@ -370,12 +370,12 @@ function getTwitterService() {
 
   // var service = OAuth1.createService('twitter');
   var service = Twitterlib.createService('twitter');
-  service.setAccessTokenUrl('https://api.twitter.com/oauth/access_token');
+  service.setAccessTokenUrl('https://api.twitter.com/2/oauth2/token');
 
-  service.setRequestTokenUrl('https://api.twitter.com/oauth/request_token');
+  service.setRequestTokenUrl('https://api.twitter.com/2/oauth2/token');
 
 
-  service.setAuthorizationUrl('https://api.twitter.com/oauth/authorize');
+  service.setAuthorizationUrl('https://api.twitter.com/2/oauth2/token');
   service.setConsumerKey(consumer_key);
   service.setConsumerSecret(consumer_secret);
   service.setScriptId(project_key);
