@@ -585,7 +585,7 @@ function doTweet(tweet, tweetID) {
   if (service.hasAccess()) {
 
     if (typeof media != 'undefined' && media.length > 0) {
-      var payload = { status: tweet, media_ids: media };
+      var payload = { text: tweet, media_ids: media };
 
     } else {
       var payload = { text: tweet };
